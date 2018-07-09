@@ -61,9 +61,9 @@ export default class Home extends Component {
                     id: '5',
                     author: '冯超',
                     thumb: 'https://gw.alipayobjects.com/zos/rmsportal/MRhHctKOineMbKAZslML.jpg',
-                    img: null,
+                    img: 'https://zos.alipayobjects.com/rmsportal/XmwCzSeJiqpkuMB.png',
                     title: 'React Native基础&入门教程：初步使用Flexbox布局',
-                    des: '在上篇中，笔者通过分享了部分安装在上篇中，笔者通过分享了部分安装在上篇中，笔者通过分享了部分安装在上篇中，笔者通过分享了部分安装在上篇中，笔者通过分享了部分安装在上篇中，笔者通过分享了部分安装在上篇中，笔者通过分享了部分安装',
+                    des: '在上篇中，装',
                     module: '前端'
                 }, {
                     id: '6',
