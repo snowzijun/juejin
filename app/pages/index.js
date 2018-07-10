@@ -22,7 +22,7 @@ export default class Index extends Component{
 
     render(){ 
         return (
-            <TabBar>
+            <TabBar >
                 <TabBar.Item title="" key="home" onPress={()=>{this.changeTab('home')}} selected={this.state.selected==='home'} icon={require('../static/icons/home.png')} selectedIcon={require('../static/icons/home-select.png')}>
                     <Home></Home>
                 </TabBar.Item>

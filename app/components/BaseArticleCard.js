@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Dimensions,  StyleSheet, Text, View, Image } from 'react-native'
-import { Card, WhiteSpace, WingBlank, Icon, Flex, Tag } from 'antd-mobile-rn'
-
+import { Card, WhiteSpace, WingBlank, Icon, Flex } from 'antd-mobile-rn'
+import SmIcon from './SmIcon'
 
 const styles = StyleSheet.create({
     authorStyle: {
@@ -71,36 +71,24 @@ export default class BaseArticleCard extends Component {
         const extra = <Text style={styles.moduleStyle}>{this.props.data.module}</Text>
         //中间需要预留几个空格，用于分离喜欢与评论
         const footer = (<Flex direction="row" >
-            <View style={{ flexDirection: 'row' }}>
-                <Icon type={'\ue63b'} size={14} color="#ddd"></Icon>
-                <Text> </Text>
-                <Text style={styles.footerTextStyle}>1</Text>
-            </View>
-            <WingBlank size="md"></WingBlank>
-            <View style={{ flexDirection: 'row' }}>
-                <Icon type={'\ue684'} size={14} color="#ddd"></Icon>
-                <Text> </Text>
-                <Text style={styles.footerTextStyle}>评论</Text>
-            </View>
+            <SmIcon icon={'\ue63b'} text={'1'} />
+            <SmIcon icon={'\ue684'} text={'评论'}/>
         </Flex>)
         return (
-            <View style={{ width: '100%', backgroundColor: 'rgb(244,248,251)' }}>
-                <Card full style={{ borderWidth: 0 }}>
-                    <Card.Header title={title}
-                        thumb={this.props.data.thumb}
-                        thumbStyle={styles.thumbStyle}
-                        extra={extra}
-                    >
-                    </Card.Header>
-                    <Card.Body style={{ paddingLeft: 10, paddingRight: 10 }}>
-                        <Body data={this.props.data}/>
-                    </Card.Body>
-                    <Card.Footer
-                        content={footer}
-                    />
-                </Card>
-                <WhiteSpace size="md"></WhiteSpace>
-            </View>
+            <Card full style={{ borderWidth: 0 }}>
+                <Card.Header title={title}
+                    thumb={this.props.data.thumb}
+                    thumbStyle={styles.thumbStyle}
+                    extra={extra}
+                >
+                </Card.Header>
+                <Card.Body style={{ paddingLeft: 10, paddingRight: 10, borderTopWidth:0 }}>
+                    <Body data={this.props.data}/>
+                </Card.Body>
+                <Card.Footer
+                    content={footer}
+                />
+            </Card>
 
         )
     }
